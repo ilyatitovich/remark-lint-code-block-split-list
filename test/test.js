@@ -4,7 +4,7 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { remark } from 'remark'
 import { compareMessage } from 'vfile-sort'
-import rremarkLintCodeBlockSplitList from '../index.js'
+import remarkLintCodeBlockSplitList from '../index.js'
 
 const invalidMdPath = path.join(import.meta.dirname, 'docs', 'invalid.md')
 const validMdPath = path.join(import.meta.dirname, 'docs', 'valid.md')
@@ -14,7 +14,7 @@ const validMd = fs.readFileSync(validMdPath, 'utf-8')
 
 test('code block split list', async () => {
   const result = await remark()
-    .use(rremarkLintCodeBlockSplitList)
+    .use(remarkLintCodeBlockSplitList)
     .process(invalidMd)
 
   result.messages.sort(compareMessage)
@@ -30,7 +30,7 @@ test('code block split list', async () => {
 
 test('no errors found', async () => {
   const result = await remark()
-    .use(rremarkLintCodeBlockSplitList)
+    .use(remarkLintCodeBlockSplitList)
     .process(validMd)
 
   assert.strictEqual(result.messages.length, 0)
