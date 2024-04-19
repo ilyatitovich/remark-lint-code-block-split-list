@@ -4,6 +4,12 @@
 
 The plugin checks if the code block split the list (сode block is incorrectly indented).
 
+## Install
+
+```sh
+npm install remark-lint-code-block-split-list
+```
+
 ## Usage
 
 Use like any other [remark-lint](https://github.com/remarkjs/remark-lint) plugin.
