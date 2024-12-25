@@ -44,3 +44,9 @@ pnpm run dev
 ```text
 6:1-8:4 warning Add 3 spaces to the beginning of the code block to align with the list. code-block-split-list remark-lint
 ```
+
+## Support the Project
+
+If you find this tool helpful, consider supporting us:
+
+- [**Support Our Work**](https://ilyatitov.vercel.app/payments)
